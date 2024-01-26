@@ -9,11 +9,23 @@
       li {
         color: red;
       }
+      #fruits-title {
+        color: black;
+      }
+      .important-places {
+        color: blue;
+      }
     </style>
   </head>
   <body>
     <header>
       <h1>Welcome to my DOM</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
+        ipsum doloremque eum inventore ducimus laudantium nostrum, dolorem aut,
+        ut repellat quos deleniti blanditiis voluptatibus nemo aperiam quibusdam
+        eius doloribus molestias?
+      </p>
     </header>
     <main>
       <h1>My Awesome Dom de baba</h1>
@@ -21,11 +33,37 @@
         <li>Jalali set</li>
         <li>Shafayet</li>
         <li>bonobash</li>
+        <li>Dom de de baba</li>
       </ul>
+      <section>
+        <h1 id="fruits-title">Fruits I like</h1>
+        <ul>
+          <li>Apple</li>
+          <li>Banana</li>
+          <li>Carret</li>
+        </ul>
+      </section>
+      <section>
+        <h1 id="places-title">Places I like to visit</h1>
+        <ul>
+          <li class="important-places">Soondorban</li>
+          <li class="important-places">BAndorban</li>
+          <li class="important-places">Kataban</li>
+          <li class="important-places">Saalbon</li>
+        </ul>
+      </section>
     </main>
   </body>
   <script src="js/dom.js"></script>
   <script>
-    console.log("adding JS inside the html file");
+    const liCollection = document.getElementsByTagName("li");
+    // console.log(liCollection);
+    for (const li of liCollection) {
+      console.log(li.innerText);
+    }
+    const allHeadings = document.getElementsByTagName("h1");
+    for (const h1 of allHeadings) {
+      console.log(h1.innerText);
+    }
   </script>
 </html>
