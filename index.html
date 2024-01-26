@@ -17,10 +17,10 @@
       }
     </style>
   </head>
-  <body>
+  <body style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">
     <header>
       <h1>Welcome to my DOM</h1>
-      <p>
+      <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
         ipsum doloremque eum inventore ducimus laudantium nostrum, dolorem aut,
         ut repellat quos deleniti blanditiis voluptatibus nemo aperiam quibusdam
@@ -49,7 +49,7 @@
           <li class="important-places">Soondorban</li>
           <li class="important-places">BAndorban</li>
           <li class="important-places">Kataban</li>
-          <li class="important-places">Saalbon</li>
+          <li class="other-place">Saalbon</li>
         </ul>
       </section>
     </main>
@@ -59,11 +59,23 @@
     const liCollection = document.getElementsByTagName("li");
     // console.log(liCollection);
     for (const li of liCollection) {
-      console.log(li.innerText);
+      //   console.log(li.innerText);
     }
     const allHeadings = document.getElementsByTagName("h1");
     for (const h1 of allHeadings) {
-      console.log(h1.innerText);
+      //   console.log(h1.innerText);
+    }
+
+    const fruitsTitle = document.getElementById("fruits-title");
+    fruitsTitle.innerText = "fruits Changed by Js";
+
+    const places = document.getElementsByClassName("important-places");
+    for (const place of places) {
+      console.log(place.innerText);
+    }
+    const fontChange = document.getElementsByTagName("body");
+    for (const font of fontChange) {
+      console.log((font.style = "background-color: pink"));
     }
   </script>
 </html>
