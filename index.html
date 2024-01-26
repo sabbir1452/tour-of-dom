@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="styles/style.css" />
     <style>
-      li {
+      .fruits-container li {
         color: red;
       }
       #fruits-title {
@@ -17,10 +17,10 @@
       }
     </style>
   </head>
-  <body style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">
+  <body>
     <header>
       <h1>Welcome to my DOM</h1>
-      <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">
+      <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
         ipsum doloremque eum inventore ducimus laudantium nostrum, dolorem aut,
         ut repellat quos deleniti blanditiis voluptatibus nemo aperiam quibusdam
@@ -35,7 +35,7 @@
         <li>bonobash</li>
         <li>Dom de de baba</li>
       </ul>
-      <section>
+      <section class="fruits-container">
         <h1 id="fruits-title">Fruits I like</h1>
         <ul>
           <li>Apple</li>
@@ -61,14 +61,18 @@
     for (const li of liCollection) {
       //   console.log(li.innerText);
     }
+
+    // option-1: getElementsByTagName
     const allHeadings = document.getElementsByTagName("h1");
     for (const h1 of allHeadings) {
       //   console.log(h1.innerText);
     }
 
+    // option-2: getElementById
     const fruitsTitle = document.getElementById("fruits-title");
     fruitsTitle.innerText = "fruits Changed by Js";
 
+    // option-3: getElementsByclassName
     const places = document.getElementsByClassName("important-places");
     for (const place of places) {
       console.log(place.innerText);
@@ -76,6 +80,15 @@
     const fontChange = document.getElementsByTagName("body");
     for (const font of fontChange) {
       console.log((font.style = "background-color: pink"));
+    }
+
+    // option-4: querySelector ----will return the first one
+
+    // option-5: querySelectorAll
+    const someLi = document.querySelectorAll(".fruits-container li");
+    // console.log(someLi);
+    for (const li of someLi) {
+      console.log(li.innerText);
     }
   </script>
 </html>
