@@ -14,6 +14,7 @@
       }
       .important-places {
         color: blue;
+        background-color: aquamarine;
       }
     </style>
   </head>
@@ -36,14 +37,16 @@
         <li>Dom de de baba</li>
       </ul>
       <section class="fruits-container">
-        <h1 id="fruits-title">Fruits I like</h1>
+        <h1 id="fruits-title" class="some-class random-class blue-bg">
+          Fruits I like
+        </h1>
         <ul>
           <li>Apple</li>
           <li>Banana</li>
           <li>Carret</li>
         </ul>
       </section>
-      <section>
+      <section id="places-container" class="large-text">
         <h1 id="places-title">Places I like to visit</h1>
         <ul>
           <li class="important-places">Soondorban</li>
@@ -55,6 +58,8 @@
     </main>
   </body>
   <script src="js/dom.js"></script>
+  <script src="js/styleInJs.js"></script>
+  <script src="js/append.js"></script>
   <script>
     const liCollection = document.getElementsByTagName("li");
     // console.log(liCollection);
@@ -75,7 +80,7 @@
     // option-3: getElementsByclassName
     const places = document.getElementsByClassName("important-places");
     for (const place of places) {
-      console.log(place.innerText);
+      // console.log(place.innerText);
     }
     const fontChange = document.getElementsByTagName("body");
     for (const font of fontChange) {
@@ -88,7 +93,7 @@
     const someLi = document.querySelectorAll(".fruits-container li");
     // console.log(someLi);
     for (const li of someLi) {
-      console.log(li.innerText);
+      // console.log(li.innerText);
     }
   </script>
 </html>
